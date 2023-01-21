@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="responsives.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>Ninja Ken</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="container">
+            <a href="#" class="brand">NINJA KEN</a>
+            <div class="nav-icon">
+                <span class="fa fa-bars"></span>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li>
+                        <a href="#">Tentang Saya</a>
+                    </li>
+                    <li>
+                        <a href="#">Proyek Contoh</a>
+                    </li>
+                    <li>
+                        <a href="#">Hubungi Saya</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="ninja-wrapper">
+        <div class="container">
+            <h1>NINJA KEN<span>.</span></h1>
+            <h2>MY PORTFOLIO</h2>
+            <img src="Ninja Ken.png" width="200px" alt="ninja ken">
+        </div>
+    </div>
+
+    <div class="tentang-wrapper">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+                into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    </div>
+
+    <div class="proyek-wrapper">
+        <div class="container">
+            <h2>Proyek contoh</h2>
+            <div class="contoh">
+                <div class="contoh-img">
+                    <input type="image" id="imageBox1" src="1.png" alt="">
+                    <input type="image" id="imageBox1Popup" src="1.png" alt="">
+                    <p>Image 1</p>
+                </div>
+                <div class="contoh-img">
+                    <input type="image" id="imageBox2" src="2.png" alt="">
+                    <input type="image" id="imageBox2Popup" src="2.png" alt="">
+                    <p>Image 2</p>
+                </div>
+                <div class="contoh-img">
+                    <input type="image" id="imageBox3" src="3.png" alt="">
+                    <input type="image" id="imageBox3Popup" src="3.png" alt="">
+                    <p>Image 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hubungi-wrapper">
+        <div class="container">
+            <h2 class="hubungi">Hubungi Saya</h2>
+            <div class="form">
+                <input id="email" class="text" placeholder="Email (Diperlukan)">
+                <textarea id="pesan" name="pesan" placeholder="Message (Diperlukan)"></textarea>
+                <button id="kirim" onclick="myFunction()">Kirim!</button>
+            </div>
+
+            <div id="salah">
+                <h2>Masukan dengan benar</h2>
+                <p>lihat FAQ</p>
+                <p>klik kembali untuk menutup</p>
+            </div>
+            
+
+            <h2 class="faq">FAQ</h2>
+            <button class="accordion">Klik untuk bantuan</button>
+            <div class="panel">
+                <p>Masukkan email dengan akun gmail kallian, diakhiri dengan @gmail.com</p>
+                <p>Masukkan pesan dengan bahasa yang sopan dan benar</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <h2 id="tes">NINJA KEN</h2>
+            <nav class="footer-nav">
+                <ul>
+                    <li>Tentang Saya</li>
+                    <li>Proyek Contoh</li>
+                    <li>Hubungi Saya</li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+    <script>
+        const modal1 = document.getElementById("imageBox1");
+        const modal2 = document.getElementById("imageBox2");
+        const modal3 = document.getElementById("imageBox3");
+        const modalPopup = document.getElementById("imageBox1Popup");
+        const moda2Popup = document.getElementById("imageBox2Popup");
+        const moda3Popup = document.getElementById("imageBox3Popup");
+
+
+        modal1.addEventListener('click', () => {
+            modalPopup.style.display = "block";
+        });
+
+        modalPopup.addEventListener('click', () => {
+            modalPopup.style.display = "none";
+        });
+
+        modal2.addEventListener('click', () => {
+            moda2Popup.style.display = "block";
+        });
+
+        moda2Popup.addEventListener('click', () => {
+            moda2Popup.style.display = "none";
+        });
+
+        modal3.addEventListener('click', () => {
+            moda3Popup.style.display = "block";
+        });
+
+        moda3Popup.addEventListener('click', () => {
+            moda3Popup.style.display = "none";
+        });
+
+        console.log(imageBox1);
+
+        const accordion = document.getElementsByClassName("accordion");
+        for (let i = 0; i < accordion.length; i++) {
+            accordion[i].addEventListener("click", function () {
+                const panel = this.nextElementSibling;
+
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+
+        function myFunction() {
+            const salah = document.getElementById("salah");
+        const kirim = document.getElementById("kirim");
+        const email = document.getElementById("email").value;
+        const pesan = document.getElementById("pesan").value;
+
+        if(email!="" && pesan !=""){
+          return true;
+        }
+
+        else {
+            kirim.addEventListener('click', () => {
+            salah.style.display = "block";
+        });
+
+        salah.addEventListener('click', () => {
+            salah.style.display = "none";
+        });
+        }
+        }
+
+    
+    </script>
+
+</body>
+
+</html>
