@@ -1,0 +1,76 @@
+@media all and (max-width: 1000px) {
+
+    .ninja-wrapper h1{
+        font-size: 80px;
+        letter-spacing: 8px;
+    }
+
+    .ninja-wrapper h2{
+        font-size: 34px;
+    }
+    
+    .tentang-wrapper h2, .proyek-wrapper h2, .hubungi-wrapper h2, footer h2{
+        font-size: 30px;
+    }
+
+    .main-nav a{
+        font-size: 12px;
+    }
+    
+  
+}
+
+
+@media all and (max-width: 670px){
+
+.container{
+
+}
+
+    .main-nav{
+        display: none;
+    }
+
+
+
+    .main-header .container{
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    .nav-icon{
+        display: flex;
+        font-size: 24px;
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    .ninja-wrapper h1{
+        font-size: 60px;
+        letter-spacing: 6px;
+    }
+
+    .ninja-wrapper h2{
+        font-size: 26px;
+    }
+
+    .proyek-wrapper .contoh{
+        display: block;
+        text-align: center;
+    }
+    
+    .contoh-img{
+        margin-bottom: 30px;
+    }
+
+ 
+
+    .tentang-wrapper h2, .proyek-wrapper h2, .hubungi-wrapper h2, footer h2{
+        font-size: 24px;
+    }
+    
+    .tentang-wrapper p{
+        font-size: 16px;
+    }
+
+}
